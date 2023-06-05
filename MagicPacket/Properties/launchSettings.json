@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MagicPacket": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
