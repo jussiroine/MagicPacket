@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 
-SendMagicPacket("04:42:1A:95:B0:93", "192.168.0.2", 7);
+SendMagicPacket("MAC:ADDRESS:GOES:HERE", "IP.ADDRESS.GOES.HERE", 7);
     
 void SendMagicPacket(string macAddress, string ipAddress, int port)
 {
