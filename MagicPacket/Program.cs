@@ -14,7 +14,10 @@ void SendMagicPacket(string macAddress, string ipAddress, int port)
     for (int i = 6; i < packet.Length; i += 6)
         Buffer.BlockCopy(macBytes, 0, packet, i, 6);
 
-    var client = new UdpClient(ipAddress, port);
+    using var client = new UdpClient(ipAddress, port)
+    {
+        EnableBroadcast = true
+    };
 
     client.Send(packet, packet.Length);
 }
